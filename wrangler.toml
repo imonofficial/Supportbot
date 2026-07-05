@@ -1,0 +1,15 @@
+name = "telegram-support-bot"
+main = "src/index.ts"
+compatibility_date = "2024-12-18"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "support-db"
+database_id = "fe985cf1-08a9-4ac6-ab37-4588d7a86d70"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "d548602ca478486d8a7c2c3441ec08f9"
+
+[triggers]
+crons = ["0 4 * * *"]
