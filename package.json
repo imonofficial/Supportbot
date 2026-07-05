@@ -1,0 +1,16 @@
+{
+  "name": "telegram-support-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "migrate": "wrangler d1 execute support-db --file=./migrations/0001_init.sql"
+  },
+  "dependencies": {
+    "grammy": "^1.33.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}
