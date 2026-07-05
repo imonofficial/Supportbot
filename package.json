@@ -1,16 +1,19 @@
 {
-  "name": "telegram-support-worker",
+  "name": "telegram-support-bot",
   "version": "1.0.0",
-  "private": true,
+  "description": "Telegram Support Ticket Bot for Cloudflare Workers",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
-    "migrate": "wrangler d1 execute support-db --file=./migrations/0001_init.sql"
+    "dev": "wrangler dev src/index.ts",
+    "deploy": "wrangler deploy src/index.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "grammy": "^1.33.0"
+    "grammy": "^1.34.0"
   },
   "devDependencies": {
-    "wrangler": "^3.99.0"
+    "@cloudflare/workers-types": "^4.20241218.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^4.0.0"
   }
 }
